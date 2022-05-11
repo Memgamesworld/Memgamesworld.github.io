@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Doppio+One&display=swap" rel="stylesheet">
+  <title>Overwatch</title>
+  <link rel="stylesheet" href="../css/css1.css">
+  <script src="../js/js1.js"></script>
+</head>
+<body class="ah_body">
+    <a class="ah_back-buttons" href="FPS1.html">Go Back</a>
+    <h1 id="ah_game-title">
+        Overwatch
+    </h1>
+    <div class="ah_slideshow-container">
+        <div class="ah_slides-fade">
+            <img width="100%" class="ah_slide-img" src="../media/photos/ow6.webp">
+        </div>
+        <div class="ah_slides-fade" id="ah_iframe-container">
+            <iframe  id="ah_iframe" width="560" height="315" src="https://www.youtube.com/embed/FqnKB22pOC0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <div class="ah_slides-fade">
+            <img width="100%" class="slide-img" src="../media/photos/ow2.webp">
+        </div>
+        <div class="ah_slides-fade">
+            <img width="100%" class="slide-img" src="../media/photos/ow3.webp">
+        </div>
+        <div class="ah_slides-fade">
+            <img width="100%" class="slide-img" src="../media/photos/ow4.webp">
+        </div>
+        <div class="ah_slides-fade">
+            <img width="100%" class="slide-img" src="../media/photos/ow5.webp">
+        </div>
+        <div class="ah_slides-fade">
+            <img width="100%" class="slide-img" src="../media/photos/ow1.webp">
+        </div>
+
+        <a class="ah_prev" onclick="plusSlides(-1)">🢀</a>
+        <a class="ah_next" onclick="plusSlides(1)">🢂</a>
+    </div>
+    
+    <div class="ah_info-container">
+        <table class="ah_info-table">
+            <tr>
+              <td class="ah_info-td-title">Developer:</td>
+              <td class="ah_info-td">Blizzard Entertainment, Iron Galaxy </td>
+            </tr>
+            <tr>
+              <td class="ah_info-td-title">Publisher:</td>
+              <td class="ah_info-td">Blizzard Entertainment</td>
+            </tr>
+            <tr>
+                <td class="ah_info-td-title">release date:</td>
+                <td class="ah_info-td">May 24, 2016</td>
+              </tr>
+              <tr>
+                <td class="ah_info-td-title">Description:</td>
+                <td class="ah_info-td">Overwatch is a colorful team-based action game starring a diverse cast of powerful heroes. Travel the world, build a team, and contest objectives in exhilarating 6v6 combat.</td>
+              </tr>
+          </table>
+        <div class="buy-buttons">
+                <a class="ah_a"  target="_blank" href="https://eu.shop.battle.net/en-gb/product/overwatch?blzcmp=ow_buy_header"><img id="steam-img" src="../media/photos/steam.png"></a>
+                <a class="ah_a" target="_blank" href="https://store.playstation.com/en-gb/product/EP0002-CUSA03974_00-OWLEGENDARY00000"><img id="playstation-img" src="../media/photos/playstation.png"></a>
+                <a class="ah_a" target="_blank" href="https://www.microsoft.com/en-eg/p/overwatch-legendary-edition/9p2q994zwb64?rtc=1"><img id="xbox-img" src="../media/photos/xbox.png"></a>
+
+            </div>
+    </div>
+    <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n){
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n){
+            showSlides(showSlides = n)
+        }
+
+        function showSlides(n){
+            let i;
+            let slides = document.getElementsByClassName("ah_slides-fade");
+            if (n > slides.length){
+                slideIndex = 1
+            }
+            if(n < 1 ){
+                slideIndex=slides.length
+            }
+            for(i=0; i < slides.length; i++){
+                slides[i].style.display = "none";
+            }
+            slides[slideIndex-1].style.display = "block";
+        }
+ 
+        
+    </script>
+</body>
+</html>

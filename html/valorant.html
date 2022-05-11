@@ -1,0 +1,102 @@
+width="100%" <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Doppio+One&display=swap" rel="stylesheet">
+  <title>Valorant</title>
+  <link rel="stylesheet" href="../css/css1.css">
+  <script src="../js/js1.js"></script>
+</head>
+<body class="ah_body">
+    <a class="ah_back-buttons" href="FPS1.html">Go Back</a>
+    <h1 id="ah_game-title">
+        Valorant 
+    </h1>
+    <div class="ah_slideshow-container">
+        <div class="ah_slides-fade">
+            <img width="100%" class="ah_slide-img" src="../media/photos/va6.jpg">
+        </div>
+        <div class="ah_slides-fade" id="ah_iframe-container">
+            <iframe id="ah_iframe" width="560" height="315" src="https://www.youtube.com/embed/e_E9W2vsRbQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <div class="ah_slides-fade">
+            <img width="100%" class="ah_slide-img" src="../media/photos/va1.webp">
+        </div>
+        <div class="ah_slides-fade">
+            <img width="100%" class="ah_slide-img" src="../media/photos/va2.webp">
+        </div>
+        <div class="ah_slides-fade">
+            <img width="100%" class="ah_slide-img" src="../media/photos/va3.webp">
+        </div>
+        <div class="ah_slides-fade">
+            <img width="100%" class="ah_slide-img" src="../media/photos/va4.webp">
+        </div>
+        <div class="ah_slides-fade">
+            <img width="100%" class="ah_slide-img" src="../media/photos/var5.webp">
+        </div>
+
+        <a class="ah_prev" onclick="plusSlides(-1)">🢀</a>
+        <a class="ah_next" onclick="plusSlides(1)">🢂</a>
+    </div>
+    
+    <div class="ah_info-container">
+        <table class="ah_info-table">
+            <tr>
+              <td class="ah_info-td-title">Developer:</td>
+              <td class="ah_info-td">Riot Games</td>
+            </tr>
+            <tr>
+              <td class="ah_info-td-title">Publisher:</td>
+              <td class="ah_info-td">Riot Games</td>
+            </tr>
+            <tr>
+                <td class="ah_info-td-title">release date:</td>
+                <td class="ah_info-td">June 2, 2020</td>
+              </tr>
+              <tr>
+                <td class="ah_info-td-title">Description:</td>
+                <td class="ah_info-td">Valorant is a tactical shooting game involving two teams with 5 players in each team. Every player can sign in and play remotely from anywhere in the world. Every game has 25 rounds and the team that wins 13 of them first wins the game. Players can choose their in-game characters called agents at the start of the game.</td>
+              </tr>
+          </table>
+        <div class="buy-buttons">
+                <a class="ah_a"  target="_blank" href="https://store.steampowered.com/app/359550/Tom_Clancys_Rainbow_Six_Siege/"><img id="steam-img" src="../media/photos/steam.png"></a>
+                <a class="ah_a" target="_blank" href="https://www.playstation.com/en-us/games/tom-clancys-rainbow-six-siege/"><img id="playstation-img" src="../media/photos/playstation.png"></a>
+                <a class="ah_a" target="_blank" href="https://www.xbox.com/en-US/games/rainbow-six-siege"><img id="xbox-img" src="../media/photos/xbox.png"></a>
+
+            </div>
+    </div>
+    <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n){
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n){
+            showSlides(showSlides = n)
+        }
+
+        function showSlides(n){
+            let i;
+            let slides = document.getElementsByClassName("ah_slides-fade");
+            if (n > slides.length){
+                slideIndex = 1
+            }
+            if(n < 1 ){
+                slideIndex=slides.length
+            }
+            for(i=0; i < slides.length; i++){
+                slides[i].style.display = "none";
+            }
+            slides[slideIndex-1].style.display = "block";
+        }
+ 
+        
+    </script>
+</body>
+</html>
